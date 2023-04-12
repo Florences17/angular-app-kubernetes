@@ -22,7 +22,7 @@ steps:
 
 - task: CopyPublishBuildArtifacts@1
   inputs:
-    CopyRoot: '$(Agent.BuildDirectory)./dev'
+    CopyRoot: '$(System.DefaultWorkingDirectory)/dev'
     Contents: '.js'
     ArtifactName: 'angularbuil_dev'
     ArtifactType: 'Server'
@@ -39,7 +39,7 @@ steps:
 
 - task: CopyPublishBuildArtifacts@1
   inputs:
-    CopyRoot: '$(Agent.BuildDirectory)/prod'
+    CopyRoot: '$(System.DefaultWorkingDirectory)/prod'
     Contents: '.js'
     ArtifactName: 'angularbuild_prod'
     ArtifactType: 'Server'
