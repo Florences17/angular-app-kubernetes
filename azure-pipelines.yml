@@ -25,7 +25,7 @@ steps:
     CopyRoot: '$(Agent.BuildDirectory)./dev'
     Contents: '.js'
     ArtifactName: 'angularbuil_dev'
-    ArtifactType: 'FilePath'
+    ArtifactType: 'Server'
 
 - task: NodeTool@0
   inputs:
@@ -42,5 +42,6 @@ steps:
     CopyRoot: '$(Agent.BuildDirectory)/prod'
     Contents: '.js'
     ArtifactName: 'angularbuild_prod'
-    ArtifactType: 'FilePath'
+    ArtifactType: 'Server'
+
 
