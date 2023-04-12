@@ -37,9 +37,10 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: CopyPublishBuildArtifacts@2
+- task: CopyPublishBuildArtifacts@1
   inputs:
-    CopyRoot: '$(Agent.BuildDirectory)./prod'
+    CopyRoot: '$(Agent.BuildDirectory)/prod'
     Contents: '.js'
-    ArtifactName: 'angularbuil_prod'
+    ArtifactName: 'angularbuild_prod'
     ArtifactType: 'FilePath'
+
